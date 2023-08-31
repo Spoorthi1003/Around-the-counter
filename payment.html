@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="payment.css"> 
+    <style>
+        ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color:black;
+      }
+      
+      li {
+        float: left;
+      }
+      
+      li a {
+        display: block;
+        color:white;
+        text-align: center;
+        padding: 20px 20px;
+        text-decoration: none;
+      }
+      
+      li a:hover {
+        background-color:var(--black);
+      }
+    </style>
+
+</head>
+<body>
+    <ul>
+        <li><a class="active" href="food.html"><h1>Home</h1></a></li>
+        <li><a href="service.html"><h1>Menu</h1></a></li>
+        <li><a href="gal.html"><h1>Gallery</h1></a></li>
+        <li><a href="review.html"><h1>Review Us</h1></a></li>
+      </ul>
+    <section class="menu" id="menu">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-6 mx-auto">
+                <div class="card ">
+                    <div class="card-header">
+                        <div class="bg-white shadow-sm pt-4 pl-2 pr-2 pb-2">
+                            <h1 style="padding-left: 480px; ">PAYMENT OPTIONS</h1>
+                            <!-- Credit card form tabs -->
+                            <ul role="tablist" class="nav bg-light nav-pills rounded nav-fill mb-3">
+                                <li class="nav-item"> <a data-toggle="pill" href="#credit-card" class="nav-link "> <i class="fas fa-credit-card mr-2"></i> Credit Card </a> </li>
+                                <li class="nav-item"> <a data-toggle="pill" href="#paypal" class="nav-link "> <i class="fas fa-paypal mr-2"></i> UPI </a> </li>
+                                <li class="nav-item"> <a data-toggle="pill" href="#net-banking" class="nav-link "> <i class="fas fa-mobile-alt mr-2"></i>Net Banking </a> </li>
+                                <li class="nav-item"> <a data-toggle="pill" href="#payOnDelivery" class="nav-link "> <i class="fas fa-mobile-alt mr-2"></i>Pay on Delivery </a> </li>
+                            </ul>
+                        </div> <!-- End -->
+                        <!-- Credit card form content -->
+                        <div class="tab-content">
+                            <!-- credit card info-->
+                            <br>
+                            <br>
+                            
+                            <div id="credit-card" class="tab-pane fade show active pt-3">
+                                <form role="form" onsubmit="event.preventDefault()">
+                                    <div class="form-group"> <label for="username">
+                                        <h2> Payment through card</h2>
+                                            <h4>Card Owner</h4>
+                                        </label> <input type="text" name="username" placeholder="Card Owner Name" required class="form-control "> </div>
+                                    <div class="form-group"> <label for="cardNumber">
+                                            <h4>Card number</h4>
+                                        </label>
+                                        <div class="input-group"> <input type="text" name="cardNumber" placeholder="Valid card number" class="form-control " required>
+                                            <div class="input-group-append"> <span class="input-group-text text-muted"> <i class="fab fa-cc-visa mx-1"></i> <i class="fab fa-cc-mastercard mx-1"></i> <i class="fab fa-cc-amex mx-1"></i> </span> </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <div class="form-group"> <label><span class="hidden-xs">
+                                                        <h4>Expiration Date</h4>
+                                                    </span></label>
+                                                <div class="input-group"> <input type="number" placeholder="MM" name="" class="form-control" required> <input type="number" placeholder="YY" name="" class="form-control" required> </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group mb-4"> <label data-toggle="tooltip" title="Three digit CV code on the back of your card">
+                                                    <h6>CVV <i class="fa fa-question-circle d-inline"></i></h6>
+                                                </label> <input type="text" required class="form-control"> </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class=" new card-footer"> <button type="button" class="subscribe btn btn-primary btn-block shadow-sm"> Confirm Payment </button>
+                                </form>
+                            </div>
+                            <hr>
+                        </div> <!-- End -->
+                        <!-- Paypal info -->
+                        <div id="paypal" class="tab-pane fade pt-3">
+                            <h2 class="pb-2">Select UPI options</h2>
+                            <div class="form-group upi"> <label class="radio-inline"> <input type="radio" name="optradio" checked>Paytm UPI </label> <label class="radio-inline"> 
+                                <input type="radio" name="optradio" class="ml-5">PhonePe</label>
+                                <label class="radio-inline"> <input type="radio" name="optradio" checked>Google Pay </label>
+                            </div>
+                            <p> <button type="button" class="subscribe btn btn-primary "><i class="subscribe fab fa-paypal mr-2"></i> Proceed to Pay</button> </p>
+                            <p class="text-muted"><b>Note: </b> <i class="text">After clicking on the button, you will be directed to a secure gateway for payment. After completing the payment process, you will be redirected back to the website to view details of your order. </i> </p>
+                        </div> <!-- End -->
+                        <!-- bank transfer info -->
+                        <div id="net-banking" class="tab-pane fade pt-3">
+                            <div class="form-group "> <label for="Select Your Bank">
+                                <hr>
+                                    <h2>Select your Bank</h2>
+                                </label> <select class="form-control" id="ccmonth">
+                                    <option value="" selected disabled>--Please select your Bank--</option>
+                                    <option>Allahabad Bank</option>
+                                    <option>Axis Bank</option>
+                                    <option>Bank of Baroda</option>
+                                    <option>Bank of India</option>
+                                    <option>Canara bank</option>
+                                    <option>ICICI Bank </option>
+                                    <option>HDFC bank</option>
+                                    <option>Kotak Mahindra</option>
+                                    <option>State bank of India</option>
+                                    <option>Yes Bank</option>
+                                    
+                                </select> </div>
+                            <div class="form-group">
+                                <p> <button type="button" class="subscribe btn btn-primary "><i class="fas fa-mobile-alt mr-2"></i> Proceed Payment</button> </p>
+                            </div>
+                            <p class="text-muted"><b>Note:</b><i class="text">After clicking on the button, you will be directed to a secure gateway for payment. After completing the payment process, you will be redirected back to the website to view details of your order. </i> </p>
+                        </div>
+                         <!-- End -->
+                        <!-- End -->
+                        <div id="payOnDelivery" class="tab-pane fade pt-3">
+                            <div class="form-group "> <label for="Select Your Bank">
+                                <hr>
+                                    <h2>Pay On Delivery</h2>
+                                    
+                            <p class="text-muted"><b>Note:</b><i class="text">You will recieve a bill of the total amount which has to be paid on delivery. </i> </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="payment.js"></script>
+</body>
+</html>
